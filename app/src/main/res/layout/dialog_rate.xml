@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="16dp">
+    <ImageButton android:id="@+id/star1" android:layout_width="52dp" android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_star" />
+    <ImageButton android:id="@+id/star2" android:layout_width="52dp" android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_star" />
+    <ImageButton android:id="@+id/star3" android:layout_width="52dp" android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_star" />
+    <ImageButton android:id="@+id/star4" android:layout_width="52dp" android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_star" />
+    <ImageButton android:id="@+id/star5" android:layout_width="52dp" android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_star" />
+</LinearLayout>

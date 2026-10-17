@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared navigation drawer content -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:paddingTop="28dp"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="28dp"
+        android:paddingEnd="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0.05"
+                android:text="@string/brand_title"
+                android:textColor="@color/text"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_crown"
+                android:alpha="0.55" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/brand_sub"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout android:id="@+id/drawerFree" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_crown" />
+                <TextView style="@style/DrawerLabel" android:text="@string/free_version" />
+            </LinearLayout>
+
+            <View style="@style/DrawerDivider" />
+
+            <LinearLayout android:id="@+id/drawerNetwork" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_globe" />
+                <TextView style="@style/DrawerLabel" android:text="@string/network_info" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/drawerCustom" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_server_add" />
+                <TextView style="@style/DrawerLabel" android:text="@string/add_custom_dns" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/drawerLookup" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_search" />
+                <TextView style="@style/DrawerLabel" android:text="@string/dns_lookup" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/drawerSettings" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_gear" />
+                <TextView style="@style/DrawerLabel" android:text="@string/settings" />
+            </LinearLayout>
+
+            <View style="@style/DrawerDivider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="28dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="@string/support"
+                android:textColor="@color/muted"
+                android:textSize="17sp" />
+
+            <LinearLayout android:id="@+id/drawerShare" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_share" />
+                <TextView style="@style/DrawerLabel" android:text="@string/share_app" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/drawerFeedback" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_feedback" />
+                <TextView style="@style/DrawerLabel" android:text="@string/send_feedback" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/drawerRate" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_thumb_up" />
+                <TextView style="@style/DrawerLabel" android:text="@string/rate_us" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/drawerAbout" style="@style/DrawerRow">
+                <ImageView style="@style/DrawerIcon" android:src="@drawable/ic_info" />
+                <TextView style="@style/DrawerLabel" android:text="@string/about_us" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

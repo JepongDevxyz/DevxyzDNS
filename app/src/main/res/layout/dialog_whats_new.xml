@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="28dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/whats_new"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="• Speed Test — find the fastest DNS server&#10;• Per-app include/exclude control&#10;• DNS Lookup tool&#10;• Custom DNS servers with DoT hostnames&#10;• Network Info dashboard&#10;• Start/stop via Quick Settings tile&#10;• App improvements &amp; bug fixes"
+        android:textColor="@color/text"
+        android:textSize="17sp"
+        android:lineSpacingExtra="6dp" />
+</LinearLayout>

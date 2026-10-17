@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/network_info"
+            android:textColor="@color/text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <android.view.View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout style="@style/InfoCard">
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_arrow_up" />
+                <TextView
+                    android:id="@+id/tvDown"
+                    style="@style/InfoValue"
+                    android:text="Download —" />
+                <View style="@style/InfoSep" />
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_arrow_down" />
+                <TextView
+                    android:id="@+id/tvUp"
+                    style="@style/InfoValue"
+                    android:text="Upload —" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/InfoCard">
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_restart" />
+                <LinearLayout style="@style/InfoText">
+                    <TextView style="@style/InfoLabel" android:text="DNS Changer Status" />
+                    <TextView android:id="@+id/tvStatus" style="@style/InfoValue" android:text="…" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/InfoCard">
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_auto" />
+                <LinearLayout style="@style/InfoText">
+                    <TextView style="@style/InfoLabel" android:text="DNS Provider" />
+                    <TextView android:id="@+id/tvProvider" style="@style/InfoValue" android:text="…" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/InfoCard">
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_wifi" />
+                <LinearLayout style="@style/InfoText">
+                    <TextView style="@style/InfoLabel" android:text="Connection Type" />
+                    <TextView android:id="@+id/tvConn" style="@style/InfoValue" android:text="…" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/InfoCard">
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_globe" />
+                <LinearLayout style="@style/InfoText">
+                    <TextView style="@style/InfoLabel" android:text="Public IP" />
+                    <TextView android:id="@+id/tvPublicIp" style="@style/InfoValue" android:text="…" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/InfoCard">
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_router" />
+                <LinearLayout style="@style/InfoText">
+                    <TextView style="@style/InfoLabel" android:text="Gateway IP" />
+                    <TextView android:id="@+id/tvGateway" style="@style/InfoValue" android:text="…" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/InfoCard">
+                <ImageView style="@style/InfoIcon" android:src="@drawable/ic_phone" />
+                <LinearLayout style="@style/InfoText">
+                    <TextView style="@style/InfoLabel" android:text="Local IP (Phone IP)" />
+                    <TextView android:id="@+id/tvLocalIp" style="@style/InfoValue" android:text="…" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

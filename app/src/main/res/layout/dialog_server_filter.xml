@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/server_filter"
+        android:textColor="@color/muted"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/server_type"
+        android:textColor="@color/muted"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/cbPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:buttonTint="@color/green"
+            android:text="@string/filter_public"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+        <CheckBox
+            android:id="@+id/cbCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/green"
+            android:text="@string/custom"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/sorting"
+        android:textColor="@color/muted"
+        android:textSize="17sp" />
+
+    <RadioGroup
+        android:id="@+id/rgSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/rbDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/green"
+            android:text="@string/filter_default"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/rbAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/green"
+            android:text="@string/ascending"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/rbDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/green"
+            android:text="@string/descending"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/btn_green"
+            android:paddingStart="36dp"
+            android:paddingEnd="36dp"
+            android:text="@string/close"
+            android:textColor="#0C1626"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:background="@drawable/btn_green"
+            android:paddingStart="36dp"
+            android:paddingEnd="36dp"
+            android:text="@string/apply"
+            android:textColor="#0C1626"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
