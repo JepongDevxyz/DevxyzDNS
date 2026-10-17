@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
             return;
         }
+        ProviderStore.seedPersonal(this); // no-op in public builds
         setContentView(R.layout.activity_main);
 
         drawerLayout = findViewById(R.id.drawerLayout);

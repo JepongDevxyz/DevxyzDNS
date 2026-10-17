@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Personal pre-configured DNS server. Intentionally EMPTY in the public repo:
+         private builds overlay real values at build time (never committed).
+         When personal_dot_hostname is non-empty, the app seeds this entry as a
+         custom server on first run and pre-selects it. -->
+    <string name="personal_dns_name"></string>
+    <string name="personal_dns1"></string>
+    <string name="personal_dns2"></string>
+    <string name="personal_dot_hostname"></string>
+</resources>

@@ -77,6 +77,34 @@ public final class ProviderStore {
         save(c, l);
     }
 
+    /**
+     * Seeds a personal pre-configured DNS server (from res values) as a custom
+     * entry on first run. In public builds the personal_* strings are empty and
+     * this is a no-op; private builds overlay real values at build time.
+     * Idempotent: never duplicates. Auto-selects only when nothing was selected.
+     */
+    public static void seedPersonal(Context c) {
+        String host;
+        try { host = c.getString(R.string.personal_dot_hostname).trim(); }
+        catch (Exception e) { return; }
+        if (host.isEmpty()) return;
+        for (DnsProvider p : custom(c)) {
+            if (host.equals(p.hostname)) return; // already seeded
+        }
+        String name;
+        try { name = c.getString(R.string.personal_dns_name).trim(); }
+        catch (Exception e) { name = ""; }
+        if (name.isEmpty()) name = "My DNS";
+        String ip1, ip2;
+        try {
+            ip1 = c.getString(R.string.personal_dns1).trim();
+            ip2 = c.getString(R.string.personal_dns2).trim();
+        } catch (Exception e) { ip1 = ""; ip2 = ""; }
+        DnsProvider p = new DnsProvider(name, ip1, ip2, host, true);
+        addCustom(c, p);
+        if (Prefs.getProvider(c) == null) Prefs.setProvider(c, p);
+    }
+
     private static void save(Context c, List<DnsProvider> l) {
         JSONArray a = new JSONArray();
         for (DnsProvider p : l) a.put(p.toJson());
